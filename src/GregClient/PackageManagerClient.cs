@@ -126,7 +126,7 @@ namespace Greg
         {
             var response = gregResponse.InternalRestReponse;
 
-            if (!(response.ResponseUri != null && response.ResponseUri.AbsolutePath != null)) return "";
+            if (!(response.ResponseUri != null && response.ResponseUri.AbsolutePath != null)) return string.Empty;
 
             var tempOutput = System.IO.Path.Combine(FileUtilities.GetTempFolder(), System.IO.Path.GetFileName(response.ResponseUri.AbsolutePath));
             using (var f = new FileStream(tempOutput, FileMode.Create))
